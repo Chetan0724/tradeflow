@@ -1,6 +1,6 @@
 import { Position, Handle } from "@xyflow/react";
 
-export type TimeNodeMetadata = {
+export type TimerNodeMetadata = {
   time: number;
 };
 
@@ -8,13 +8,13 @@ const Timer = ({
   data,
 }: {
   data: {
-    metadata: TimeNodeMetadata;
+    metadata: TimerNodeMetadata;
   };
   isConnectable: boolean;
 }) => {
   return (
     <div className="border p-4">
-      Every {data.metadata.time / 3600} seconds
+      Every {data.metadata.time} seconds
       <Handle type="source" position={Position.Right}></Handle>
     </div>
   );

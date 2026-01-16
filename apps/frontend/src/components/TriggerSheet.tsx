@@ -15,12 +15,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
 import type { NodeKind, NodeMetadata } from "./CreateWorkFlow";
 import { useState } from "react";
-import type { PriceTriggerMetadata } from "@/nodes/triggers/PriceTrigger";
-import type { TimeNodeMetadata } from "@/nodes/triggers/Timer";
 import { Input } from "./ui/input";
+import type { PriceTriggerMetadata, TimerNodeMetadata } from "common/types";
+import { SUPPORTED_ASSETS } from "common/types";
 
 const SUPPORTED_TRIGGERS = [
   {
@@ -36,15 +35,13 @@ const SUPPORTED_TRIGGERS = [
   },
 ];
 
-export const SUPPORTED_ASSETS = ["SOL", "BTC", "ETH"];
-
 const TriggerSheet = ({
   onSelect,
 }: {
   onSelect: (kind: NodeKind, metadata: NodeMetadata) => void;
 }) => {
   const [metadata, setMetadata] = useState<
-    PriceTriggerMetadata | TimeNodeMetadata
+    PriceTriggerMetadata | TimerNodeMetadata
   >({
     time: 3600,
   });

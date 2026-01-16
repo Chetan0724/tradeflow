@@ -6,11 +6,14 @@ import {
   addEdge,
 } from "@xyflow/react";
 import TriggerSheet from "./TriggerSheet";
-import PriceTrigger, {
-  type PriceTriggerMetadata,
-} from "@/nodes/triggers/PriceTrigger";
-import Timer, { type TimerNodeMetadata } from "@/nodes/triggers/Timer";
-import { Lighter, type TradingMetadata } from "@/nodes/actions/Lighter";
+import PriceTrigger from "@/nodes/triggers/PriceTrigger";
+import Timer from "@/nodes/triggers/Timer";
+import { Lighter } from "@/nodes/actions/Lighter";
+import type {
+  TradingMetadata,
+  TimerNodeMetadata,
+  PriceTriggerMetadata,
+} from "common/types";
 import ActionSheet from "./ActionSheet";
 import { Backpack } from "@/nodes/actions/Backpack";
 import { Hyperliquid } from "@/nodes/actions/Hyperliquid";

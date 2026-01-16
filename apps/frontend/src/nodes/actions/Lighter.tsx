@@ -1,10 +1,10 @@
 import { Handle, Position } from "@xyflow/react";
-import type { TradingMetadata } from "./Lighter";
+import type { TradingMetadata } from "common/types";
 
-export function Backpack({ data }: { data: { metadata: TradingMetadata } }) {
+export function Lighter({ data }: { data: { metadata: TradingMetadata } }) {
   return (
     <div className="p-4 border">
-      Backpack Trade
+      Lighter Trade
       <div>{data.metadata.type}</div>
       <div>{data.metadata.qty}</div>
       <div>{data.metadata.symbol}</div>

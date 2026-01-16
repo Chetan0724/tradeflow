@@ -18,11 +18,9 @@ import {
 
 import type { NodeKind, NodeMetadata } from "./CreateWorkFlow";
 import { useState } from "react";
-import type { PriceTriggerMetadata } from "@/nodes/triggers/PriceTrigger";
-import type { TimeNodeMetadata } from "@/nodes/triggers/Timer";
 import { Input } from "./ui/input";
-import type { TradingMetadata } from "@/nodes/actions/Lighter";
-import { SUPPORTED_ASSETS } from "./TriggerSheet";
+import type { TradingMetadata } from "common/types";
+import { SUPPORTED_ASSETS } from "common/types";
 
 const SUPPORTED_ACTIONS = [
   {
